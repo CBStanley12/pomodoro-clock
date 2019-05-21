@@ -9,7 +9,37 @@
     <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 <body>
-    
+    <header>
+        <h1>Pomodoro Clock</h1>
+    </header>
+    <main>
+        <div>
+            <div>
+                <h4 id="break-label">Break Length</h4>
+                <button id="break-increment" type="button"></button>
+                <span id="id-length">5</span>
+                <button id="break-decrement" type="button"></button>
+            </div>
+            <div>
+                <h4 id="session-label">Session Length</h4>
+                <button id="session-increment" type="button"></button>
+                <span id="session-length">25</span>
+                <button id="session-decrement" type="button"></button>
+            </div>
+        </div>
+        <div>
+            <div id="timer-container">
+                <h2 id="timer-label">Session</h2>
+                <p id="time-left">25:00</p>
+            </div>
+        </div>
+        <div>
+            <div id="button-container">
+                <button id="start_stop" type="button"></button>
+                <button id="reset" type="button"></button>
+            </div>
+        </div>
+    </main>
 
     <script src="/app.js"></script>
 </body>
