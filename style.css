@@ -9,6 +9,18 @@ body {
     font-family: 'Baloo Bhai', cursive;
 }
 
+button {
+    border: none;
+    color: #808080;
+}
+
+button:hover { opacity: 0.5; }
+
+button:active {
+    opacity: 1;
+    transform: translateY(4px);
+}
+
 #time-left {
     font-family: 'Digital';
 }
