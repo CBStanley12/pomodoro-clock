@@ -90,7 +90,21 @@ function countdown(){
     }
 }
 
-function startTimer(){}
+function startTimer(){
+    if(!onBreak){
+        timerLabel.textContent = 'Session';
+        if(duration == (sessionNum * 60)){
+            timeLeft.textContent = displayTime(sessionNum, 0);
+        }
+        sessionCount = setInterval(countdown, 1000, sessionNum);
+    } else {
+        timerLabel.textContent = 'Break';
+        if(duration == (breakNum * 60)){
+            timeLeft.textContent = displayTime(breakNum, 0);
+        }
+        breakCount = setInterval(countdown, 1000, breakNum);
+    }
+}
 
 function stopTimer(){}
 
