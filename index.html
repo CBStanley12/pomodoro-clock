@@ -6,36 +6,39 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pomodoro Clock</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css"> 
 </head>
 <body>
-    <header>
-        <h1>Pomodoro Clock</h1>
+    <header class="container">
+        <div class="row">
+            <h1 class="twelve columns">Pomodoro Clock</h1>
+        </div>
     </header>
-    <main>
-        <div>
-            <div>
+    <main class="container">
+        <div class="row">
+            <div class="six columns">
                 <h4 id="break-label">Break Length</h4>
                 <button id="break-increment" type="button"></button>
                 <span id="id-length">5</span>
                 <button id="break-decrement" type="button"></button>
             </div>
-            <div>
+            <div class="six columns">
                 <h4 id="session-label">Session Length</h4>
                 <button id="session-increment" type="button"></button>
                 <span id="session-length">25</span>
                 <button id="session-decrement" type="button"></button>
             </div>
         </div>
-        <div>
-            <div id="timer-container">
+        <div class="row">
+            <div id="timer-container" class="six columns offset-by-three">
                 <h2 id="timer-label">Session</h2>
                 <p id="time-left">25:00</p>
             </div>
         </div>
-        <div>
-            <div id="button-container">
+        <div class="row">
+            <div id="button-container" class="six columns offset-by-three">
                 <button id="start_stop" type="button"></button>
                 <button id="reset" type="button"></button>
             </div>
