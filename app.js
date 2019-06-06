@@ -63,7 +63,32 @@ function decrement(){
     }
 }
 
-function countdown(num){}
+function countdown(){
+    if(seconds == 0 && duration > 0){
+        minutes--;
+        seconds = getSecs(duration, minutes);
+        duration--;
+        seconds--;
+        timeLeft.textContent = displayTime(minutes, seconds);
+    } else if(duration == 0 && !onBreak){
+        audio.play();
+        setTime(breakNum);
+        onBreak = true;
+        clearInterval(sessionCount);
+        startTimer();
+    } else if(duration == 0 && onBreak){
+        audio.play();
+        setTime(sessionNum);
+        onBreak = false;
+        clearInterval(breakCount);
+        startTimer();
+    } else {
+        seconds = getSecs(duration, minutes);
+        duration--;
+        seconds--;
+        timeLeft.textContent = displayTime(minutes, seconds);
+    }
+}
 
 function startTimer(){}
 
