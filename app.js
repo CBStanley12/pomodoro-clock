@@ -8,8 +8,8 @@ var timerOn = false,
     sessionNum = parseInt(sessionLen.innerHTML),
     breakNum = parseInt(breakLen.innerHTML),
     duration = sessionNum * 60,
-    minutes,
-    seconds;
+    minutes = getMins(duration),
+    seconds = getSecs(duration, minutes);
 
 function increment(){}
 
@@ -27,6 +27,10 @@ function setTime(num){}
 
 function displayTime(mins, secs){}
 
-function getSecs(dur, mins){}
+function getSecs(dur, mins){
+    return dur - Math.round(mins * 60);
+}
 
-function getMins(dur){}
+function getMins(dur){
+    return Math.floor(dur / 60);
+}
