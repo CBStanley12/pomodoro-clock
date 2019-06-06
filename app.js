@@ -71,7 +71,11 @@ function stopTimer(){}
 
 function resetTimer(){}
 
-function setTime(num){}
+function setTime(num){
+    duration = num * 60;
+    minutes = getMins(duration);
+    seconds = getSecs(duration, minutes);
+}
 
 function displayTime(mins, secs){
     if(mins>=10 && secs>=10){
