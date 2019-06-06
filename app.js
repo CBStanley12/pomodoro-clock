@@ -112,7 +112,21 @@ function stopTimer(){
     clearInterval(breakCount);
 }
 
-function resetTimer(){}
+function resetTimer(){
+    if(timerOn){
+        stopTimer();
+    }
+    audio.pause();
+    audio.currentTime = 0;
+    onBreak = false;
+    timerLabel.textContent = 'Session';
+    sessionNum = 25;
+    breakNum = 5;
+    setTime(sessionNum);
+    sessionLen.textContent = sessionNum;
+    breakLen.textContent = breakNum;
+    timeLeft.textContent = displayTime(sessionNum, 0);
+}
 
 function setTime(num){
     duration = num * 60;
