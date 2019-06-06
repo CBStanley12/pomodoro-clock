@@ -1,6 +1,3 @@
-# pomodoro-clock
-A working pomodoro clock built with JavaScript
-
 <h1 align="center">Pomodoro Clock</h1>
 <p align="center">A responsive pomodoro clock built with JavaScript</p>
 
