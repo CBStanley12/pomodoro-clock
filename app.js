@@ -106,7 +106,11 @@ function startTimer(){
     }
 }
 
-function stopTimer(){}
+function stopTimer(){
+    timerOn = false;
+    clearInterval(sessionCount);
+    clearInterval(breakCount);
+}
 
 function resetTimer(){}
 
