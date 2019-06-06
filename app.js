@@ -33,20 +33,35 @@ function increment(){
     if (this.id.includes('break') && breakNum < 60 && !timerOn){
         breakNum++;
         breakLen.textContent = breakNum;
-    if(onBreak){
-        timeLeft.textContent = displayTime(breakNum, 0);
-    }
+        if(onBreak){
+            timeLeft.textContent = displayTime(breakNum, 0);
+        }
     } else if (this.id.includes('session') && sessionNum < 60 && !timerOn){
         sessionNum++;
         sessionLen.textContent = sessionNum;
         setTime(sessionNum);
-    if (!onBreak){
-        timeLeft.textContent = displayTime(sessionNum, 0);
-    }
+        if(!onBreak){
+            timeLeft.textContent = displayTime(sessionNum, 0);
+        }
     }
 }
 
-function decrement(){}
+function decrement(){
+    if (this.id.includes('break') && breakNum > 1 && !timerOn){
+        breakNum--;
+        breakLen.textContent = breakNum;
+        if(onBreak){
+            timeLeft.textContent = displayTime(breakNum, 0);
+        }
+    } else if (this.id.includes('session') && sessionNum > 1 && !timerOn){
+        sessionNum--;
+        sessionLen.textContent = sessionNum;
+        setTime(sessionNum);
+        if(!onBreak){
+            timeLeft.textContent = displayTime(sessionNum, 0);
+        }
+    }
+}
 
 function countdown(num){}
 
