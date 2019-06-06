@@ -1,7 +1,8 @@
 const timerLabel = document.querySelector('#timer-label'),
     timeLeft = document.querySelector('#time-left'),
     breakLen = document.querySelector('#break-length'),
-    sessionLen = document.querySelector('#session-length');
+    sessionLen = document.querySelector('#session-length'),
+    audio = document.querySelector('#beep');
 
 var timerOn = false,
     onBreak = false,
