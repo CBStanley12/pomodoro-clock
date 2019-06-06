@@ -73,7 +73,17 @@ function resetTimer(){}
 
 function setTime(num){}
 
-function displayTime(mins, secs){}
+function displayTime(mins, secs){
+    if(mins>=10 && secs>=10){
+        return `${mins}:${secs}`;
+    } else if(mins<10 && secs>=10){
+        return `0${mins}:${secs}`;
+    } else if(mins>=10 && secs<10){
+        return `${mins}:0${secs}`;
+    } else if(mins<10 && secs<10){
+        return `0${mins}:0${secs}`;
+    }
+}
 
 function getSecs(dur, mins){
     return dur - Math.round(mins * 60);
