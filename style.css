@@ -7,6 +7,8 @@
 body {
     text-align: center;
     font-family: 'Baloo Bhai', cursive;
+    background-color: #151E29;
+    color: #808080;
 }
 
 button {
@@ -21,6 +23,23 @@ button:active {
     transform: translateY(4px);
 }
 
+#break-length, #session-length { font-size: 2.4em; }
+
+#timer-container {
+    border: 5px solid #808080;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+h2, h4 { margin-bottom: -10px; }
+
 #time-left {
     font-family: 'Digital';
+    font-size: 5em;
+    margin-bottom: 0;
 }
+
+#button-container { margin-top: 10px; }
