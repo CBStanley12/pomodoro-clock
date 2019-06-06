@@ -154,3 +154,27 @@ function getSecs(dur, mins){
 function getMins(dur){
     return Math.floor(dur / 60);
 }
+
+var colors = {
+    'opt-creative' : { 'primary' : '#77dd77', 'secondary' : 'black' }, 
+    'opt-happiness' : { 'primary' : '#fdfd96', 'secondary' : 'black' },
+    'opt-passion' : { 'primary' : '#ff6961', 'secondary' : 'black' },
+    'opt-fancy' : { 'primary' : '#b19cd9', 'secondary' : 'black' },
+    'opt-calm' : { 'primary' : '#aec6cf', 'secondary' : 'black' },
+    'opt-energy' : { 'primary' : '#ffb347', 'secondary' : 'black' },
+    'opt-stability' : { 'primary' : '#836953', 'secondary' : 'black' },
+    'opt-default' : { 'primary' : '#151E29', 'secondary' : '#808080' },
+};
+  
+document.querySelector('#chooseMood').addEventListener('change', function() {
+    document.body.style.backgroundColor = colors[this.value].primary;
+    changeColors(colors[this.value].secondary);
+})
+  
+function changeColors(clr){
+    document.body.style.color = clr;
+    document.getElementById('timer-container').style.borderColor = clr;
+    Array.from(document.getElementsByTagName('button')).forEach(function(btn){
+        btn.style.color = clr;
+    });
+}
