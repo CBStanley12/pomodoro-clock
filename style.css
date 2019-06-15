@@ -43,3 +43,6 @@ h2, h4 { margin-bottom: -10px; }
 }
 
 #button-container { margin-top: 10px; }
+
+footer { margin-top: 100px; }
+footer a, footer a:hover { color: #808080; }

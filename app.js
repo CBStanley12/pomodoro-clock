@@ -177,4 +177,5 @@ function changeColors(clr){
     Array.from(document.getElementsByTagName('button')).forEach(function(btn){
         btn.style.color = clr;
     });
+    document.getElementById('footer').style.color = clr;
 }
